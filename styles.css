@@ -3,7 +3,7 @@ html, body {
 }
 
 /* The sidebar menu */
-.sidenav, .sidenav-animated {
+.sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 4em; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -17,10 +17,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   font-family: Lora;
-}
-
-.sidenav-animated {
-  z-index:-1;
 }
 
 /* The navigation menu links */
@@ -37,6 +33,11 @@ html, body {
   color: #7abaf2;
 }
 
+.name-container {
+  text-align: center;
+  font-family: Lora;
+}
+
 section {
   margin-left: 4em;
   height: 100vh;
@@ -45,32 +46,56 @@ section {
   align-items: center;
   position: relative;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .home {
   color: black;
-  
 }
 
 .about {
   background-color: black;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: url("./assets/person_background.png");
   color: #f6fafe;
   /*background-image: linear-gradient(to right, black 0%, #434343 100%);*/
 }
 
-h1, .name, .name-emph {
-  font-size: 100px;
+.about blockquote {
+  padding-left: 500px;
+}
+
+.name-container, .name, .name-emph {
+  font-size: 50px;
   font-family: Lora;
   color: black;
 }
 
 blockquote {
-  
+  font-size: 20px;
+  font-family: Lora;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1000px) {
   h1, .name, .name-emph {
     font-size: 25px;
+  }
+
+  .about {
+    background-image: url("./assets/person.png");
+    background-size: 100%;
+    background-position-y: 80%;
+  }
+
+  .about blockquote {
+    padding-left: 0px;
+    padding-bottom: 200px;
+  }
+
+  blockquote {
+    font-size: 10px;
   }
 }
