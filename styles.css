@@ -33,23 +33,26 @@ html, body {
   color: #7abaf2;
 }
 
-.name-container {
-  text-align: center;
-  font-family: Lora;
-}
-
 section {
   margin-left: 4em;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
   overflow: hidden;
   flex-direction: column;
 }
 
+.home-content {
+  text-align: center;
+}
+
+.about-content {
+  padding-left: 40vw;
+}
+
 .home {
+  align-items: center;
   color: black;
 }
 
@@ -64,13 +67,20 @@ section {
 }
 
 .about blockquote {
-  padding-left: 500px;
+  margin-left: 0px;
+}
+
+.name-container, .name, .name-emph, .name-dark {
+  font-size: 50px;
+  font-family: Lora;
 }
 
 .name-container, .name, .name-emph {
-  font-size: 50px;
-  font-family: Lora;
   color: black;
+}
+
+.name-dark {
+  color: #f6fafe;
 }
 
 blockquote {
@@ -90,8 +100,13 @@ blockquote {
     background-position-y: 80%;
   }
 
-  .about blockquote {
+  .about-content {
     padding-left: 0px;
+    text-align: center;
+  }
+
+  .about blockquote {
+    margin-left: 40px;
     padding-bottom: 200px;
   }
 
