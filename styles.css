@@ -1,5 +1,6 @@
 /*===== GENERAL =====*/
-html, body {
+html,
+body {
   margin: 0px;
 }
 
@@ -29,7 +30,8 @@ html, body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .sidenav a:active {
+.sidenav a:hover,
+.sidenav a:active {
   color: #7abaf2;
 }
 
@@ -61,11 +63,12 @@ section {
   color: black;
 }
 
-.name-container, .name, .name-emph {
+.name-container,
+.name,
+.name-emph {
   font-size: 50px;
   font-family: Lora;
 }
-
 
 blockquote {
   font-size: 20px;
@@ -79,30 +82,29 @@ blockquote {
 
 /*===== ABOUT =====*/
 .about {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  flex-direction: row;
-  align-items: center;
   background-color: black;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  /*background-image: linear-gradient(to right, black 0%, #434343 100%);*/
+}
+
+.about-content {
+  margin-left: 40vw;
 }
 
 .person-image {
-  width: 60vw;
+  position: absolute;
+  width: 40vw;
+  left: 0px;
+  transform: translate(-700px);
 }
 
 .about-content blockquote {
   margin-left: 0px;
 }
 
-
 /*===== RESPONSIVE DESIGN =====*/
 @media screen and (max-width: 1000px) {
-  h1, .name, .name-emph {
+  h1,
+  .name,
+  .name-emph {
     font-size: 25px;
   }
 
@@ -112,18 +114,21 @@ blockquote {
   }
 
   .about-content {
+    margin-left: 0px;
     padding-left: 0px;
     text-align: center;
   }
 
   .about blockquote {
     margin-left: 40px;
-    padding-bottom: 2em;
+    padding-bottom: 30%;
   }
 
   .person-image {
-    top: 50%;
-    bottom: 50%;
+    left: calc(700px + 50% - 20vw);
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   blockquote {

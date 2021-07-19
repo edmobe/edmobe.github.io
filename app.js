@@ -1,3 +1,6 @@
+/* GENERAL */   
+const TOGGLE_WIDTH = 1000;
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,6 +11,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+const controller = new ScrollMagic.Controller();
+
+/* HOME */
 const homeTween = new TimelineLite();
 
 homeTween.add(
@@ -22,36 +28,32 @@ const aboutImagePath = {
     ]
 }
 
-/*
-const aboutTween = new TimelineLite();
-aboutTween.add(
-    TweenLite.to('.person-image', 1, {
-        bezier: aboutImagePath,
-        ease: Power1.easeInOut,
-    })
-);
-*/
-
-
-const controller = new ScrollMagic.Controller();
-
 const homeScene = new ScrollMagic.Scene({
-  triggerElement: ".home",
-  duration: 500,
-  triggerHook: 0,
-})
-  .setTween(homeTween)
-  .setPin(".home")
-  .addTo(controller); //.addIndicators()
+    triggerElement: ".home",
+    duration: 500,
+    triggerHook: 0,
+  })
+    .setTween(homeTween)
+    .setPin(".home")
+    .addTo(controller); //.addIndicators();
 
-/*
-const aboutScene = new ScrollMagic.Scene({
-  triggerElement: ".about",
-  duration: 500,
-  triggerHook: 0.5,
-})
-  .setTween(aboutTween)
-  .setPin(".person-image")
-  .addTo(controller)
-  .addIndicators();
-*/
+/* ABOUT */
+if (document.body.clientWidth >= TOGGLE_WIDTH) {
+    const aboutTween = new TimelineLite();
+    aboutTween.add(
+        TweenLite.to('.person-image', 1, {
+            bezier: aboutImagePath,
+            ease: Power1.easeInOut,
+        })
+    );
+
+    const aboutScene = new ScrollMagic.Scene({
+        triggerElement: ".about",
+        duration: 420,
+        triggerHook: 0.5,
+      })
+        .setTween(aboutTween)
+        .addTo(controller); //.addIndicators();
+}
+
+
