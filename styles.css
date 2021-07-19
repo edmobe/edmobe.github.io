@@ -1,8 +1,9 @@
+/*===== GENERAL =====*/
 html, body {
   margin: 0px;
 }
 
-/* The sidebar menu */
+/*===== SIDENAV =====*/
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 4em; /* Set the width of the sidebar */
@@ -19,7 +20,6 @@ html, body {
   font-family: Lora;
 }
 
-/* The navigation menu links */
 .sidenav a {
   text-align: center;
   text-decoration: none;
@@ -29,10 +29,11 @@ html, body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav a:hover, .sidenav a:active {
   color: #7abaf2;
 }
 
+/*===== SECTIONS =====*/
 section {
   margin-left: 4em;
   height: 100vh;
@@ -41,63 +42,73 @@ section {
   position: relative;
   overflow: hidden;
   flex-direction: column;
-}
-
-.home-content {
-  text-align: center;
-}
-
-.about-content {
-  padding-left: 40vw;
-}
-
-.home {
   align-items: center;
+}
+
+.light-section {
+  background-color: #f6fafe;
+}
+
+.dark-section {
+  background-color: black;
+}
+
+.light-content {
+  color: #f6fafe;
+}
+
+.dark-content {
   color: black;
 }
 
-.about {
-  background-color: black;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  background-image: url("./assets/person_background.png");
-  color: #f6fafe;
-  /*background-image: linear-gradient(to right, black 0%, #434343 100%);*/
-}
-
-.about blockquote {
-  margin-left: 0px;
-}
-
-.name-container, .name, .name-emph, .name-dark {
+.name-container, .name, .name-emph {
   font-size: 50px;
   font-family: Lora;
 }
 
-.name-container, .name, .name-emph {
-  color: black;
-}
-
-.name-dark {
-  color: #f6fafe;
-}
 
 blockquote {
   font-size: 20px;
   font-family: Lora;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+/*===== HOME =====*/
+.home-content {
+  text-align: center;
+}
+
+/*===== ABOUT =====*/
+.about {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /*background-image: linear-gradient(to right, black 0%, #434343 100%);*/
+}
+
+.person-image {
+  width: 60vw;
+}
+
+.about-content blockquote {
+  margin-left: 0px;
+}
+
+
+/*===== RESPONSIVE DESIGN =====*/
 @media screen and (max-width: 1000px) {
   h1, .name, .name-emph {
     font-size: 25px;
   }
 
   .about {
-    background-image: url("./assets/person.png");
-    background-size: 100%;
-    background-position-y: 80%;
+    flex-direction: column-reverse;
+    overflow: hidden;
   }
 
   .about-content {
@@ -107,10 +118,15 @@ blockquote {
 
   .about blockquote {
     margin-left: 40px;
-    padding-bottom: 200px;
+    padding-bottom: 2em;
+  }
+
+  .person-image {
+    top: 50%;
+    bottom: 50%;
   }
 
   blockquote {
-    font-size: 10px;
+    font-size: 0.8em;
   }
 }
