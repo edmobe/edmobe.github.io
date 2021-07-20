@@ -103,9 +103,21 @@ blockquote {
   transform: translate(-700px);
 }
 
+.about-content blockquote {
+  text-align: justify;
+  padding-right: 50px;
+}
+
 /*===== WORK =====*/
 .work-content {
   position: relative;
+  text-align: center;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+.work-content a {
+  padding-bottom: 10px;
 }
 
 .card-container {
@@ -118,15 +130,24 @@ blockquote {
   transform-style: preserve-3d;
 }
 
-.card-container .card-box {
+.card-container .card-box,
+.card-container .card-box-light {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 30vw;
+  height: 40vh;
   margin: 40px;
-  background: black;
-  border-radius: 20px;
   transform-style: preserve-3d;
   font-family: "Lora";
+}
+
+.card-box {
+  border-radius: 30px;
+  background: black;
+  opacity: 0;
+}
+
+.card-box-light {
+  background: #f6fafe;
 }
 
 .card-container .card-box::before {
@@ -175,14 +196,42 @@ blockquote {
   z-index: 10;
 }
 
+.project-title {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: justify;
+  color: black;
+  font-family: "Lora";
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.project-description {
+  margin-bottom: 50px;
+  position: relative;
+  text-align: justify;
+  color: black;
+  font-family: "Lora";
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
 .card-container .card-box .card-read {
+  font-family: "Lora";
   position: absolute;
   bottom: 0;
   left: 50%;
   transform-style: preserve-3d;
   transform: translate3d(-50%, 0, 75px);
-  color: #f6fafe;
-  background: black;
+  color: black;
   padding: 10px 25px;
   border-radius: 30px;
   text-decoration: none;
@@ -190,7 +239,6 @@ blockquote {
   opacity: 0;
   z-index: 10;
 }
-
 
 .card-container .card-box .card-circle {
   position: absolute;
@@ -223,26 +271,10 @@ blockquote {
   transform: translate3d(-50%, -50%, 50px);
 }
 
-.card-container .card-box:nth-child(1) .card-circle,
-.card-container .card-box:nth-child(1) .card-read {
-  background: #FFC770;
+.card-container .card-box .card-circle,
+.card-container .card-box .card-read {
+  background: #f6fafe;
 }
-
-.card-container .card-box:nth-child(2) .card-circle,
-.card-container .card-box:nth-child(2) .card-read {
-  background: #00BAFF;
-}
-
-.card-container .card-box:nth-child(3) .card-circle,
-.card-container .card-box:nth-child(3) .card-read {
-  background: #620ED8;
-}
-
-.card-container .card-box:nth-child(4) .card-circle,
-.card-container .card-box:nth-child(4) .card-read {
-  background: #223D6F;
-}
-
 
 /*===== RESPONSIVE DESIGN =====*/
 @media screen and (max-width: 1000px) {
@@ -270,6 +302,7 @@ blockquote {
   }
 
   .about blockquote {
+    padding-right: 0px;
     padding-bottom: 15em;
   }
 

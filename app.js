@@ -58,26 +58,49 @@ VanillaTilt.init(document.querySelectorAll(".card-box"), {
   speed: 100,
 });
 
-const workTween = new TimelineLite();
-workTween.add(
-  TweenLite.to(".card-container .card-box .card-name", 1, {
-    top: "20px",
-    opacity: "1",
+const TOTAL_PROJECTS = 2;
+
+for (let projectCount = 1; projectCount <= TOTAL_PROJECTS; projectCount++) {
+  let workTween = new TimelineLite();
+  workTween.add(
+    TweenLite.to(
+      `.project-${projectCount}-top-animation`,
+      1,
+      {
+        top: "20px",
+        opacity: "1",
+      },
+      0
+    )
+  );
+  workTween.add(
+    TweenLite.to(
+      `.project-${projectCount}-normal-animation`,
+      1,
+      {
+        opacity: "1",
+      },
+      0
+    )
+  );
+  workTween.add(
+    TweenLite.to(
+      `.project-${projectCount}-bottom-animation`,
+      1,
+      {
+        bottom: "40px",
+        opacity: "1",
+      },
+      0
+    )
+  );
+
+  const workScene = new ScrollMagic.Scene({
+    triggerElement: `#project-${projectCount}`,
+    duration: 350,
+    triggerHook: 0.6,
   })
-);
-workTween.add(
-    TweenLite.to(".card-container .card-box .card-read", 1, {
-        bottom: "30px",
-        opacity: "1"
-    })
-)
-
-
-const workScene = new ScrollMagic.Scene({
-  triggerElement: ".work",
-  duration: 500,
-  triggerHook: 0.5,
-})
-  .setTween(workTween)
-  .addTo(controller);
-
+    .setTween(workTween)
+    .addTo(controller)
+    .addIndicators();
+}
