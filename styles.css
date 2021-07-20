@@ -103,13 +103,14 @@ blockquote {
 @media screen and (max-width: 1000px) {
   h1,
   .name,
-  .name-emph {
-    font-size: 40px;
+  .name-emph,
+  .title {
+    font-size: 1.8em;
   }
 
   blockquote {
     font-size: 1em;
-    line-height: 1.3em;
+    line-height: 1.8em;
   }
 
   .about {
@@ -124,15 +125,14 @@ blockquote {
   }
 
   .about blockquote {
-    margin-left: 40px;
-    padding-bottom: 30%;
+    padding-bottom: 15em;
   }
 
   .person-image {
-    left:25vw;
+    max-width: 40vw;
+    padding-bottom: 5em;
     bottom: 0px;
-    margin-left: auto;
-    margin-right: auto;
+    left: calc(50% - 20vw);
   }
 
 }
