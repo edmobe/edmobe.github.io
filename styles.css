@@ -65,12 +65,19 @@ section {
 
 .name-container,
 .name,
-.name-emph {
+.name-emph,
+.title {
   font-size: 50px;
   font-family: Lora;
 }
 
+.title {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 blockquote {
+  line-height: 2em;
   font-size: 20px;
   font-family: Lora;
 }
@@ -96,9 +103,6 @@ blockquote {
   transform: translate(-700px);
 }
 
-.about-content blockquote {
-  margin-left: 0px;
-}
 
 /*===== RESPONSIVE DESIGN =====*/
 @media screen and (max-width: 1000px) {
