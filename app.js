@@ -38,22 +38,21 @@ const homeScene = new ScrollMagic.Scene({
     .addTo(controller); //.addIndicators();
 
 /* ABOUT */
-if (document.body.clientWidth >= TOGGLE_WIDTH) {
-    const aboutTween = new TimelineLite();
-    aboutTween.add(
-        TweenLite.to('.person-image', 1, {
-            bezier: aboutImagePath,
-            ease: Power1.easeInOut,
-        })
-    );
+const aboutTween = new TimelineLite();
+aboutTween.add(
+    TweenLite.to('.person-image', 1, {
+        bezier: aboutImagePath,
+        ease: Power1.easeInOut,
+    })
+);
 
-    const aboutScene = new ScrollMagic.Scene({
-        triggerElement: ".about",
-        duration: 420,
-        triggerHook: 0.5,
-      })
-        .setTween(aboutTween)
-        .addTo(controller); //.addIndicators();
-}
+const aboutScene = new ScrollMagic.Scene({
+    triggerElement: ".about",
+    duration: 420,
+    triggerHook: 0.5,
+  })
+    .setTween(aboutTween)
+    .addTo(controller); //.addIndicators();
+
 
 
