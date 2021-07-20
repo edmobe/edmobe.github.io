@@ -41,10 +41,9 @@ section {
   height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  flex-direction: column;
-  align-items: center;
 }
 
 .light-section {
@@ -88,10 +87,6 @@ blockquote {
 }
 
 /*===== ABOUT =====*/
-.about {
-  background-color: black;
-}
-
 .about-content {
   margin-left: 40vw;
 }
@@ -109,7 +104,12 @@ blockquote {
   h1,
   .name,
   .name-emph {
-    font-size: 25px;
+    font-size: 40px;
+  }
+
+  blockquote {
+    font-size: 20px;
+    line-height: 1.5em;
   }
 
   .about {
@@ -135,7 +135,4 @@ blockquote {
     margin-right: auto;
   }
 
-  blockquote {
-    font-size: 0.8em;
-  }
 }
