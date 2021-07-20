@@ -4,6 +4,10 @@ body {
   margin: 0px;
 }
 
+h2 {
+  font-weight: normal;
+}
+
 /*===== SIDENAV =====*/
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -38,7 +42,7 @@ body {
 /*===== SECTIONS =====*/
 section {
   margin-left: 4em;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,6 +91,7 @@ blockquote {
 }
 
 /*===== ABOUT =====*/
+
 .about-content {
   margin-left: 40vw;
 }
@@ -96,6 +101,146 @@ blockquote {
   width: 40vw;
   left: 0px;
   transform: translate(-700px);
+}
+
+/*===== WORK =====*/
+.work-content {
+  position: relative;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: auto;
+  transform-style: preserve-3d;
+}
+
+.card-container .card-box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background: black;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  font-family: "Lora";
+}
+
+.card-container .card-box::before {
+  content: "PROJECT";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  font-weight: 900;
+  color: #f6fafe;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-container .card-box::after {
+  content: "PROJECT";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2em;
+  font-weight: 900;
+  color: #f6fafe;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-container .card-box:hover::before,
+.card-container .card-box:hover::after {
+  opacity: 0.1;
+}
+
+.card-container .card-box .card-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #f6fafe;
+  font-family: "Lora";
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.card-container .card-box .card-read {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  color: #f6fafe;
+  background: black;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+
+.card-container .card-box .card-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #f6fafe;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+.card-container .card-box .card-project {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 300px;
+  transition: 0.5s;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+.card-container .card-box:hover .card-project {
+  transform: translate3d(-50%, -50%, 50px);
+}
+
+.card-container .card-box:nth-child(1) .card-circle,
+.card-container .card-box:nth-child(1) .card-read {
+  background: #FFC770;
+}
+
+.card-container .card-box:nth-child(2) .card-circle,
+.card-container .card-box:nth-child(2) .card-read {
+  background: #00BAFF;
+}
+
+.card-container .card-box:nth-child(3) .card-circle,
+.card-container .card-box:nth-child(3) .card-read {
+  background: #620ED8;
+}
+
+.card-container .card-box:nth-child(4) .card-circle,
+.card-container .card-box:nth-child(4) .card-read {
+  background: #223D6F;
 }
 
 
@@ -134,5 +279,4 @@ blockquote {
     bottom: 0px;
     left: calc(50% - 20vw);
   }
-
 }
