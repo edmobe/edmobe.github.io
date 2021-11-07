@@ -53,54 +53,5 @@ const aboutScene = new ScrollMagic.Scene({
   .addTo(controller); //.addIndicators();
 
 /* WORK */
-VanillaTilt.init(document.querySelectorAll(".card-box"), {
-  max: 15,
-  speed: 100,
-});
 
-const TOTAL_PROJECTS = 2;
 
-for (let projectCount = 1; projectCount <= TOTAL_PROJECTS; projectCount++) {
-  let workTween = new TimelineLite();
-  workTween.add(
-    TweenLite.to(
-      `.project-${projectCount}-top-animation`,
-      1,
-      {
-        top: "20px",
-        opacity: "1",
-      },
-      0
-    )
-  );
-  workTween.add(
-    TweenLite.to(
-      `.project-${projectCount}-normal-animation`,
-      1,
-      {
-        opacity: "1",
-      },
-      0
-    )
-  );
-  workTween.add(
-    TweenLite.to(
-      `.project-${projectCount}-bottom-animation`,
-      1,
-      {
-        bottom: "40px",
-        opacity: "1",
-      },
-      0
-    )
-  );
-
-  const workScene = new ScrollMagic.Scene({
-    triggerElement: `#project-${projectCount}`,
-    duration: 350,
-    triggerHook: 0.6,
-  })
-    .setTween(workTween)
-    .addTo(controller)
-    .addIndicators();
-}
