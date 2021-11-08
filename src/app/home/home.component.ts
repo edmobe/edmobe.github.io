@@ -87,7 +87,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     let aspectRatio = this.getAspectRatio();
     this.camera = new THREE.PerspectiveCamera(
       this.fieldOfView,
-      aspectRatio,
+      this.getAspectRatio(),
       this.nearClippingPlane,
       this.farClippingPlane
     )
@@ -114,8 +114,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     //* Renderer
     // Use canvas element in template
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, alpha: true });
-    this.renderer.setPixelRatio(devicePixelRatio);
-    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
+    this.renderer.setSize(window.innerWidth, window.innerWidth);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
@@ -133,6 +133,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.createScene();
     this.startRenderingLoop();
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
     window.addEventListener('resize', () => {
       // Update camera
       this.camera.aspect = this.getAspectRatio();

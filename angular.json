@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-three": {
+    "edmobe-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -16,6 +16,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "es":"src/i18n/messages.es.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -31,11 +37,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/flag-icon-css/css/flag-icons.min.css"
             ],
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "localize":["es"]
+            },
             "production": {
               "budgets": [
                 {
@@ -72,10 +82,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-three:build:production"
+              "browserTarget": "edmobe-portfolio:build:production"
             },
             "development": {
-              "browserTarget": "angular-three:build:development"
+              "browserTarget": "edmobe-portfolio:build:development"
+            },
+            "es": {
+              "browserTarget": "edmobe-portfolio:build:es"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +96,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-three:build"
+            "browserTarget": "edmobe-portfolio:build"
           }
         },
         "test": {
@@ -107,5 +120,5 @@
       }
     }
   },
-  "defaultProject": "angular-three"
+  "defaultProject": "edmobe-portfolio"
 }
