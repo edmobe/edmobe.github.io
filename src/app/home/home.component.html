@@ -13,30 +13,30 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a i18n="@@home" class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">{{ 'home' | translate:param }}</a>
                     </li>
                     <li class="nav-item">
-                        <a i18n="@@about" class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">{{ 'about' | translate:param }}</a>
                     </li>
                     <li class="nav-item">
-                        <a i18n="@@work" class="nav-link" href="#">Work</a>
+                        <a class="nav-link" href="#">{{ 'work' | translate:param }}</a>
                     </li>
                     <li class="nav-item">
-                        <a i18n="@@contact" class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">{{ 'contact' | translate:param }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a i18n="@@language" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Language
+                            {{ 'language' | translate:param }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/"><span class="flag-icon flag-icon-us flag-icon"></span>
+                            <li><a class="dropdown-item" (click)="translateToEnglish()"><span class="flag-icon flag-icon-us flag-icon"></span>
                                     English</a></li>
-                            <li><a class="dropdown-item" href="/es"><span class="flag-icon flag-icon-es flag-icon"></span>
+                            <li><a class="dropdown-item" (click)="translateToSpanish()"><span class="flag-icon flag-icon-es flag-icon"></span>
                                     Español</a></li>
-                            <li><a class="dropdown-item" href="/de"><span class="flag-icon flag-icon-de flag-icon"></span>
+                            <li><a class="dropdown-item" (click)="translateToGerman()"><span class="flag-icon flag-icon-de flag-icon"></span>
                                     Deutsch</a></li>
                         </ul>
                     </li>

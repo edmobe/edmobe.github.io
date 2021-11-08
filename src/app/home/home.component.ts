@@ -2,12 +2,16 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '
 import * as THREE from "three";
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+import {TranslateService} from '@ngx-translate/core';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+
+  param = {value: 'home'};
 
   @ViewChild('canvas')
   private canvasRef: ElementRef;
@@ -155,7 +159,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
     })
   }
 
-  constructor() {}
+  translateToSpanish() {
+    this.translate.use('es');
+  }
+
+  translateToGerman() {
+    this.translate.use('de');
+  }
+
+  translateToEnglish() {
+    this.translate.use('en');
+  }
+
+  constructor(private translate: TranslateService) {
+    // this language will be used as a fallback when a translation isn't found in the current language
+    this.translate.setDefaultLang('en');
+
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    this.translate.use('en');
+  }
   ngOnInit(): void {}
 
 }
