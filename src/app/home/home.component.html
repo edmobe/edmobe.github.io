@@ -1,48 +1,84 @@
 <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="home-container">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Lora&family=Oswald:wght@700&family=Poppins:wght@700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
 
+
+<div class="home-container">
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Eduardo Moya</a>
+        <div class="container-fluid navbar-container">
+            <a class="navbar-brand big-font" (click)="goHome()" href="javascript:;">Eduardo Moya</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav align-items-end">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">{{ 'home' | translate:param }}</a>
+                        <a class="nav-link big-font" [ngClass]="{active: isHomeActive()}" (click)="goHome()"
+                            href="javascript:;">{{ 'home' | translate:param }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ 'about' | translate:param }}</a>
+                        <a class="nav-link big-font" [ngClass]="{active: isWorkActive()}" (click)="goWork()"
+                            href="javascript:;">{{ 'work' | translate:param }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">{{ 'work' | translate:param }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">{{ 'contact' | translate:param }}</a>
+                        <a class="nav-link big-font" [ngClass]="{active: isContactActive()}" (click)="goContact()"
+                            href="javascript:;">{{ 'contact' | translate:param }}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle big-font" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ 'language' | translate:param }}
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" (click)="translateToEnglish()"><span class="flag-icon flag-icon-us flag-icon"></span>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                            aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item small-font" (click)="translateToEnglish()"
+                                    href="javascript:;"><span class="flag-icon flag-icon-us flag-icon"></span>
                                     English</a></li>
-                            <li><a class="dropdown-item" (click)="translateToSpanish()"><span class="flag-icon flag-icon-es flag-icon"></span>
+                            <li><a class="dropdown-item small-font" (click)="translateToSpanish()"
+                                    href="javascript:;"><span class="flag-icon flag-icon-es flag-icon"></span>
                                     Español</a></li>
-                            <li><a class="dropdown-item" (click)="translateToGerman()"><span class="flag-icon flag-icon-de flag-icon"></span>
-                                    Deutsch</a></li>
+                            <!-- <li><a class="dropdown-item small-font" (click)="translateToGerman()"><span
+                                        class="flag-icon flag-icon-de flag-icon"></span>
+                                    Deutsch</a></li> -->
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- About -->
+    <div class="section row align-items-center">
+        <div class="col-md-8 text-white">
+            <h1 class="big-font white-font">{{ 'profession-short' | translate:param }}</h1>
+            <blockquote class="small-font white-font">
+                {{ 'passionate' | translate:param }} <a class="light-emph">{{ 'passionate-fields' | translate:param
+                    }}</a>.
+                {{ 'enjoy' | translate:param }} <a class="light-emph">{{ 'web-apps' | translate:param }}</a> {{
+                'participating'
+                | translate:param }}
+                <a class="light-emph">{{ 'projects' | translate:param }}</a>. {{ 'experience' | translate:param }}
+                <a class="light-emph">{{ 'experience-fields' | translate:param }}</a> {{ 'algorithms' | translate:param
+                }}.
+                {{ 'cultures' | translate:param }} <a class="light-emph">{{ 'multicultural' | translate:param }}</a>,
+                {{ 'multicultural-help' | translate:param }}.
+            </blockquote>
+        </div>
+        <div class="col-md-4 text-white">
+            <p class="small-font white-font"><span>&#60;</span>imagen_animada_de_CR_y_CE<span>&#62;</span></p>
+
+        </div>
+    </div>
+
     <canvas #canvas id="canvas"></canvas>
 </div>
