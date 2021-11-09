@@ -159,24 +159,28 @@ export class HomeComponent implements OnInit, AfterViewInit {
     })
   }
 
+  private translateTo(language: string) {
+    this.translate.use(language);
+  }
+
   translateToSpanish() {
-    this.translate.use('es');
+    this.translateTo('es');
   }
 
   translateToGerman() {
-    this.translate.use('de');
+    this.translateTo('de');
   }
 
   translateToEnglish() {
-    this.translate.use('en');
+    this.translateTo('en');
   }
 
   constructor(private translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('es');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-    this.translate.use('en');
+    this.translate.use('es');
   }
   ngOnInit(): void {}
 
