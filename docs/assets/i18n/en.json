@@ -1,7 +1,7 @@
 {
     "home": "Home",
     "about": "About",
-    "work": "Work",
+    "work": "Projects",
     "contact": "Contact",
     "language": "Language",
     "profession-short": "I am a Computer Engineer from Costa Rica",
@@ -15,6 +15,17 @@
     "experience-fields": "embedded systems, image and video processing, algorithms optimization, operating systems, computer architecture, and teaching",
     "algorithms": "algorithms and data structures",
     "cultures": "Furthermore, I love cultures so I have had",
-    "multicultural": "multicultural experiences",
-    "multicultural-help": "which have helped me to improve my teamwork with people from all around the world"
+    "multicultural-help": "which have helped me to improve my teamwork with people from all around the world",
+
+
+
+    "experience-title":"Experience",
+    "embedded-systems":"Embedded systems",
+    "image-video":"Image and video processing",
+    "algorithms-optimization":"Algorithms optimization",
+    "operating-systems":"Operating systems",
+    "computer-architecture":"Computer architecture",
+    "teaching":"Teaching",
+    "multicultural":"Multicultural experiences",
+    "more":"Read more"
 }
