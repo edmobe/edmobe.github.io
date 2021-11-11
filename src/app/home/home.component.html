@@ -9,76 +9,68 @@
     rel="stylesheet">
 
 
-<div class="home-container">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid navbar-container">
-            <a class="navbar-brand big-font" (click)="goHome()" href="javascript:;">Eduardo Moya</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav align-items-end">
-                    <li class="nav-item">
-                        <a class="nav-link big-font" [ngClass]="{active: isHomeActive()}" (click)="goHome()"
-                            href="javascript:;">{{ 'home' | translate:param }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link big-font" [ngClass]="{active: isWorkActive()}" (click)="goWork()"
-                            href="javascript:;">{{ 'work' | translate:param }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link big-font" [ngClass]="{active: isContactActive()}" (click)="goContact()"
-                            href="javascript:;">{{ 'contact' | translate:param }}</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle big-font" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ 'language' | translate:param }}
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
-                            aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item small-font" (click)="translateToEnglish()"
-                                    href="javascript:;"><span class="flag-icon flag-icon-us flag-icon"></span>
-                                    English</a></li>
-                            <li><a class="dropdown-item small-font" (click)="translateToSpanish()"
-                                    href="javascript:;"><span class="flag-icon flag-icon-es flag-icon"></span>
-                                    Español</a></li>
-                            <!-- <li><a class="dropdown-item small-font" (click)="translateToGerman()"><span
-                                        class="flag-icon flag-icon-de flag-icon"></span>
-                                    Deutsch</a></li> -->
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- About -->
-    <div class="section row align-items-center">
-        <div class="col-md-8 text-white">
-            <h1 class="big-font white-font">{{ 'profession-short' | translate:param }}</h1>
-            <blockquote class="small-font white-font">
-                {{ 'passionate' | translate:param }} <a class="light-emph">{{ 'passionate-fields' | translate:param
-                    }}</a>.
-                {{ 'enjoy' | translate:param }} <a class="light-emph">{{ 'web-apps' | translate:param }}</a> {{
-                'participating'
-                | translate:param }}
-                <a class="light-emph">{{ 'projects' | translate:param }}</a>. {{ 'experience' | translate:param }}
-                <a class="light-emph">{{ 'experience-fields' | translate:param }}</a> {{ 'algorithms' | translate:param
-                }}.
-                {{ 'cultures' | translate:param }} <a class="light-emph">{{ 'multicultural' | translate:param }}</a>,
-                {{ 'multicultural-help' | translate:param }}.
-            </blockquote>
-        </div>
-        <div class="col-md-4 text-white">
-            <p class="small-font white-font"><span>&#60;</span>imagen_animada_de_CR_y_CE<span>&#62;</span></p>
-
+<!-- Navbar -->
+<nav class="navbar first-section navbar-expand-lg navbar-dark">
+    <div class="container-fluid navbar-container">
+        <a class="navbar-brand big-font" (click)="goHome()" href="javascript:;">Eduardo Moya</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav align-items-end">
+                <li class="nav-item">
+                    <a class="nav-link big-font" [ngClass]="{active: isHomeActive()}" (click)="goHome()"
+                        href="javascript:;">{{ 'home' | translate:param }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link big-font" [ngClass]="{active: isWorkActive()}" (click)="goWork()"
+                        href="javascript:;">{{ 'work' | translate:param }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link big-font" [ngClass]="{active: isContactActive()}" (click)="goContact()"
+                        href="javascript:;">{{ 'contact' | translate:param }}</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto align-items-end">
+                <li class="nav-item">
+                    <a class="nav-link flag-link" (click)="translateToEnglish()" href="javascript:;"><span
+                            class="flag-icon flag-icon-us flag-icon"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link flag-link" (click)="translateToSpanish()" href="javascript:;"><span
+                            class="flag-icon flag-icon-es flag-icon"></span></a>
+                </li>
+                <!-- <li class="nav-item">
+                        <a class="dropdown-item small-font" (click)="translateToGerman()"><span
+                            class="flag-icon flag-icon-de flag-icon"></span>
+                        Deutsch</a>
+                    </li> -->
+            </ul>
         </div>
     </div>
+</nav>
 
-    <canvas #canvas id="canvas"></canvas>
+<!-- About -->
+<div class="row align-items-center first-section about-container align-middle">
+    <div class="col-lg-7 col-left text-white justify-content-center">
+        <h1 class="big-font white-font section-title">{{ 'profession-short' | translate:param }}</h1>
+        <blockquote class="small-font white-font">
+            {{ 'passionate' | translate:param }} <a class="light-emph">{{ 'passionate-fields' | translate:param
+                }}</a>.
+            {{ 'enjoy' | translate:param }} <a class="light-emph">{{ 'web-apps' | translate:param }}</a> {{
+            'participating'
+            | translate:param }}
+            <a class="light-emph">{{ 'projects' | translate:param }}</a>. {{ 'experience' | translate:param }}
+            <a class="light-emph">{{ 'experience-fields' | translate:param }}</a> {{ 'algorithms' | translate:param
+            }}.
+            {{ 'cultures' | translate:param }} <a class="light-emph">{{ 'multicultural' | translate:param }}</a>,
+            {{ 'multicultural-help' | translate:param }}.
+        </blockquote>
+    </div>
+    <div class="col-lg-5 col-right text-white">
+
+    </div>
 </div>
+
+<div class="spacer-dark"></div>
