@@ -1,7 +1,7 @@
 {
     "home": "Inicio",
     "about": "Acerca",
-    "work": "Trabajo",
+    "work": "Proyectos",
     "contact": "Contacto",
     "language": "Idioma",
     "profession-short": "Soy un ingeniero en computadores de Costa Rica",
@@ -15,6 +15,17 @@
     "experience-fields": "sistemas embebidos, procesamiento de imágenes y vídeo, optimización de algoritmos, sistemas operativos, arquitectura de computadores y enseñando",
     "algorithms": "algoritmos y estructuras de datos",
     "cultures": "Además, me encantan las culturas, por lo que he tenido",
-    "multicultural": "experiencias multiculturales",
-    "multicultural-help": "que me han ayudado a mejorar mis habilidades de trabajo en equipo con personas de todo el mundo"
+    "multicultural-help": "que me han ayudado a mejorar mis habilidades de trabajo en equipo con personas de todo el mundo",
+
+
+
+    "experience-title":"Experiencia",
+    "embedded-systems":"Sistemas embebidos",
+    "image-video":"Procesamiento de imágenes y vídeos",
+    "algorithms-optimization":"Optimización de algoritmos",
+    "operating-systems":"Sistemas operativos",
+    "computer-architecture":"Arquitectura de computadores",
+    "teaching":"Docencia",
+    "multicultural":"Experiencias multiculturales",
+    "more":"Ver más"
 }

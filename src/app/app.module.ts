@@ -11,6 +11,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MapCanvasComponent } from './map-canvas/map-canvas.component';
 import { CeMapComponent } from './ce-map/ce-map.component';
+import { SpacerDarkComponent } from './spacer-dark/spacer-dark.component';
+import { CardsComponent } from './cards/cards.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -23,7 +25,9 @@ export function createTranslateLoader(http: HttpClient) {
     HomeComponent,
     ModelComponent,
     MapCanvasComponent,
-    CeMapComponent
+    CeMapComponent,
+    SpacerDarkComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

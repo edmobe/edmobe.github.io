@@ -1,0 +1,17 @@
+<!-- 
+
+GRADIENT BANNER DESIGN BY SIMON LURWER ON DRIBBBLE:
+https://dribbble.com/shots/14101951-Banners
+
+-->
+<div class="main-container">
+  <div class="cards">
+    <div class="card" *ngFor="let experience of experiences">
+      <div class="card__icon"><i class="{{experience.icon}}"></i></div>
+      <h2 class="card__title">{{ experience.description | translate:param }}</h2>
+      <p class="card__apply">
+        <a class="card__link" href="{{experience.url}}"> {{ 'more' | translate:param }} <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+  </div>
+</div>

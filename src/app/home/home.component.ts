@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
+import { CardsComponent } from '../cards/cards.component';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild(CardsComponent) cardsComponent: CardsComponent;
+
   param = { value: 'home' };
   active = 0;
 
@@ -46,14 +49,17 @@ export class HomeComponent implements OnInit {
 
   translateToSpanish() {
     this.translateTo('es');
+    this.cardsComponent.translateTo('es');
   }
 
   translateToGerman() {
     this.translateTo('de');
+    this.cardsComponent.translateTo('de');
   }
 
   translateToEnglish() {
     this.translateTo('en');
+    this.cardsComponent.translateTo('en');
   }
 
   constructor(private translate: TranslateService) {

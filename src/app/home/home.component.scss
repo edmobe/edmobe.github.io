@@ -1,3 +1,5 @@
+@import 'src/styles.scss';
+
 /* ====================== GENERAL ====================== */
 
 a {
@@ -13,6 +15,9 @@ blockquote {
 h1 {
   font-size: 70px;
   padding-bottom: 10px;
+  background: -webkit-linear-gradient($blue-dark, $pink);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .row {
@@ -25,8 +30,7 @@ h1 {
 /* ====================== NAVBAR ====================== */
 
 .navbar {
-  // background-color: rgba(3, 7, 30, 0.6);
-  background-color: transparent;
+  background-color: white;
   padding: 1em 2em;
 }
 
@@ -38,12 +42,39 @@ h1 {
   padding: 0;
   margin-right: 2em;
   font-size: 24px;
+  color: $blue-dark;
+}
+
+
+.fa-bars {
+  color: $blue-dark;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .nav-link {
-  font-size: 14px;
+  font-size: 18px;
   padding-bottom: 1px;
+  color: $blue-dark;
 }
+
+.nav-link, .navbar-brand {
+  transition: color 100ms ease-in-out 100ms;
+}
+
+.active {
+  color: $pink;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: $pink;
+}
+
 
 .flag-link:hover {
   transform: scale(1.2);
@@ -80,35 +111,30 @@ h1 {
 }
 
 .light-emph {
-  color: rgba(255, 186, 8, 1);
-}
-
-.white-font {
-  color: white;
+  color: $pink;
 }
 
 .centered-text {
   text-align: center;
 }
 
-/* ====================== SPACER ====================== */
-
-.spacer-dark {
-  width: 100vw;
-  height: 40vh; 
-  overflow: hidden;
-}
-
-.spacer-dark > img {
-  width: 100%;
-  // height: 100%;
-}
-
 /* ====================== SECTIONS ====================== */
 
-.first-section {
-  background: #6a040f;
+.col-left, .col-right {
+  z-index: 1;
 }
+
+.gradient-corner {
+  position: absolute;
+  width: 90vw;
+  height: 100vh;
+  //background: radial-gradient(circle at top left, $blue 0%, $blue-dark 50%);
+}
+
+
+// .first-section {
+//   background: $blue-dark;
+// }
 
 /* ====================== RESPONSIVE ====================== */
 
