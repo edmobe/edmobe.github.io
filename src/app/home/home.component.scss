@@ -122,6 +122,7 @@ h1 {
 
 .col-left, .col-right {
   z-index: 1;
+  padding: 0em 2em;
 }
 
 .gradient-corner {
@@ -153,10 +154,10 @@ h1 {
     font-size: 18px;
   }
 
-  .col-left,
-  .col-right {
-    padding: 2em;
-  }
+  // .col-left,
+  // .col-right {
+  //   padding: 2em;
+  // }
 
   h1 {
     font-size: 50px;
