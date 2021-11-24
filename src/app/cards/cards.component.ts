@@ -9,13 +9,13 @@ import { TranslateService } from '@ngx-translate/core';
 export class CardsComponent implements OnInit {
   param = { value: 'home' };
   experiences = [
-    {description: 'embedded-systems', url: 'https://google.com', icon: 'fa-solid fa-microchip'},
-    {description: 'image-video', url: 'https://google.com', icon: 'fa-solid fa-photo-film'},
-    {description: 'algorithms-optimization', url: 'https://google.com', icon: 'fa-solid fa-gauge-simple'},
-    {description: 'operating-systems', url: 'https://google.com', icon: 'fa-brands fa-linux'},
-    {description: 'computer-architecture', url: 'https://google.com', icon: 'fa-solid fa-memory'},
-    {description: 'teaching', url: 'https://google.com', icon: 'fa-solid fa-chalkboard-user'},
-    {description: 'multicultural', url: 'https://google.com', icon: 'fa-solid fa-earth-americas'},
+    {description: 'embedded-systems', url: 'https://github.com/edmobe/repository-grouping/wiki/Embedded-systems', icon: 'fa-solid fa-microchip'},
+    {description: 'image-video', url: 'https://github.com/edmobe/repository-grouping/wiki/Image-and-video-processing', icon: 'fa-solid fa-photo-film'},
+    {description: 'algorithms-optimization', url: 'https://github.com/edmobe/repository-grouping/wiki/Algorithms-optimization', icon: 'fa-solid fa-gauge-simple'},
+    {description: 'computer-architecture', url: 'https://github.com/edmobe/repository-grouping/wiki/Computer-architecture', icon: 'fa-solid fa-memory'},
+    {description: 'operating-systems', url: 'https://github.com/edmobe/repository-grouping/wiki/Operating-systems', icon: 'fa-brands fa-linux'},
+    {description: 'teaching', url: 'https://www.youtube.com/playlist?list=PLyLgsb5JMqkLZlOtKTPhE6SXsc3JqiXyQ', icon: 'fa-solid fa-chalkboard-user'},
+    // {description: 'multicultural', url: 'https://google.com', icon: 'fa-solid fa-earth-americas'},
   ];
 
   public translateTo(language: string) {
