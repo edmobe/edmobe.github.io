@@ -13,6 +13,12 @@ import { MapCanvasComponent } from './map-canvas/map-canvas.component';
 import { CeMapComponent } from './ce-map/ce-map.component';
 import { SpacerDarkComponent } from './spacer-dark/spacer-dark.component';
 import { CardsComponent } from './cards/cards.component';
+import { ContactComponent } from './contact/contact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -27,7 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
     MapCanvasComponent,
     CeMapComponent,
     SpacerDarkComponent,
-    CardsComponent
+    CardsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +47,16 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    MatNativeDateModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'legacy'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

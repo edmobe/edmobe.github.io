@@ -45,6 +45,171 @@
 // $yellow: #ffe66d;
 
 // High contrast
+$my-pink-palette: (
+    50 : #fde1ef,
+    100 : #fab5d7,
+    200 : #f784bc,
+    300 : #f353a1,
+    400 : #f12e8d,
+    500 : #ee0979,
+    600 : #ec0871,
+    700 : #e90666,
+    800 : #e7055c,
+    900 : #e20249,
+    A100 : #ffffff,
+    A200 : #ffd6e1,
+    A400 : #ffa3bb,
+    A700 : #ff8aa8,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-green-palette: (
+    50 : #e8fcf4,
+    100 : #c5f7e3,
+    200 : #9ef2d1,
+    300 : #77ecbf,
+    400 : #5ae8b1,
+    500 : #3de4a3,
+    600 : #37e19b,
+    700 : #2fdd91,
+    800 : #27d988,
+    900 : #1ad177,
+    A100 : #ffffff,
+    A200 : #d2ffe7,
+    A400 : #9fffcd,
+    A700 : #85ffbf,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-orange-palette: (
+    50 : #ffede1,
+    100 : #ffd3b3,
+    200 : #ffb580,
+    300 : #ff974d,
+    400 : #ff8127,
+    500 : #ff6b01,
+    600 : #ff6301,
+    700 : #ff5801,
+    800 : #ff4e01,
+    900 : #ff3c00,
+    A100 : #ffffff,
+    A200 : #fff4f2,
+    A400 : #ffcabf,
+    A700 : #ffb5a6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-purple-palette: (
+    50 : #f1e6f9,
+    100 : #dbc1f0,
+    200 : #c397e6,
+    300 : #ab6ddb,
+    400 : #994ed4,
+    500 : #872fcc,
+    600 : #7f2ac7,
+    700 : #7423c0,
+    800 : #6a1db9,
+    900 : #5712ad,
+    A100 : #ebdeff,
+    A200 : #cdabff,
+    A400 : #af78ff,
+    A700 : #a05eff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-blue-palette: (
+    50 : #e7e7f3,
+    100 : #c2c2e0,
+    200 : #9a99cc,
+    300 : #7170b8,
+    400 : #5252a8,
+    500 : #343399,
+    600 : #2f2e91,
+    700 : #272786,
+    800 : #21207c,
+    900 : #15146b,
+    A100 : #a2a2ff,
+    A200 : #6f6fff,
+    A400 : #3c3cff,
+    A700 : #2323ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
 $blue-dark: #343399;
 $purple: #872FCC;
 $orange: #FF6B01;
@@ -52,4 +217,40 @@ $pink: #ee0979;
 $green: #3de4a3;
 
 
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
 
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$edmobe-portfolio-primary: mat.define-palette($my-purple-palette);
+$edmobe-portfolio-accent: mat.define-palette($my-purple-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$edmobe-portfolio-warn: mat.define-palette($my-pink-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$edmobe-portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $edmobe-portfolio-primary,
+    accent: $edmobe-portfolio-accent,
+    warn: $edmobe-portfolio-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($edmobe-portfolio-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
