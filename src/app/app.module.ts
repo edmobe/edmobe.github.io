@@ -19,6 +19,9 @@ import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { WaveStartComponent } from './wave-start/wave-start.component';
+import { WaveEndComponent } from './wave-end/wave-end.component';
 
 // AoT requires an exported function for factories
 export function createTranslateLoader(http: HttpClient) {
@@ -34,7 +37,10 @@ export function createTranslateLoader(http: HttpClient) {
     CeMapComponent,
     SpacerDarkComponent,
     CardsComponent,
-    ContactComponent
+    ContactComponent,
+    TestimonialsComponent,
+    WaveStartComponent,
+    WaveEndComponent
   ],
   imports: [
     BrowserModule,

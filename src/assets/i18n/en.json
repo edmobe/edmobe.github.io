@@ -1,16 +1,20 @@
 {
     "home": "Home",
     "about": "About",
-    "work": "Projects",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
     "contact": "Contact",
     "language": "Language",
+    "progress": "This section is under construction, but it will be available soon",
+
+
     "profession-short": "I am a Computer Engineer from Costa Rica",
     "passionate": "I am passionate about",
     "passionate-fields": "programming and electronics",
     "enjoy": "Particularly, I enjoy creating",
     "web-apps": "web applications",
     "participating": "and participating in both",
-    "projects": "software and hardware projects",
+    "both-projects": "software and hardware projects",
     "experience": "I have experience in",
     "experience-fields": "embedded systems, image and video processing, algorithms optimization, operating systems, computer architecture, and teaching",
     "algorithms": "algorithms and data structures",
@@ -18,8 +22,6 @@
     "multicultural-help": "which have helped me to improve my teamwork with people from all around the world",
 
 
-
-    "experience-title":"Experience",
     "embedded-systems":"Embedded systems",
     "image-video":"Image and video processing",
     "algorithms-optimization":"Algorithms optimization",

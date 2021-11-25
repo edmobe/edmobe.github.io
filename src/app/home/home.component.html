@@ -1,102 +1,77 @@
-<div class="first-section">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid navbar-container">
-      <a class="navbar-brand big-font" (click)="goHome()" href="javascript:;"
-        >Eduardo Moya</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav align-items-end">
-          <li class="nav-item">
-            <a
-              class="nav-link big-font"
-              [ngClass]="{ active: isHomeActive() }"
-              (click)="goHome()"
-              href="javascript:;"
-              >{{ "home" | translate: param }}</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link big-font"
-              [ngClass]="{ active: isWorkActive() }"
-              (click)="goWork()"
-              href="javascript:;"
-              >{{ "work" | translate: param }}</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link big-font"
-              [ngClass]="{ active: isContactActive() }"
-              (click)="goContact()"
-              href="javascript:;"
-              >{{ "contact" | translate: param }}</a
-            >
-          </li>
-        </ul>
-        <ul class="navbar-nav ms-auto align-items-end">
-          <li class="nav-item">
-            <a
-              class="nav-link flag-link"
-              (click)="translateToEnglish()"
-              href="javascript:;"
-              ><span class="flag-icon flag-icon-us flag-icon"></span
-            ></a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link flag-link"
-              (click)="translateToSpanish()"
-              href="javascript:;"
-              ><span class="flag-icon flag-icon-es flag-icon"></span
-            ></a>
-          </li>
-          <!-- <li class="nav-item">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid navbar-container">
+    <a class="navbar-brand big-font" href="#home">Eduardo Moya</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav align-items-end mr-auto">
+        <li class="nav-item">
+          <a class="nav-link big-font" href="#home">{{
+            "home" | translate: param }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link big-font" href="#projects">{{
+            "projects" | translate: param }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link big-font" href="#testimonials">{{
+            "testimonials" | translate: param }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link big-font" href="#contact">{{ "contact" | translate: param }}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav align-items-end">
+        <li class="nav-item">
+          <a class="nav-link flag-link" (click)="translateToEnglish()" href="javascript:;"><span
+              class="flag-icon flag-icon-us flag-icon"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link flag-link" (click)="translateToSpanish()" href="javascript:;"><span
+              class="flag-icon flag-icon-es flag-icon"></span></a>
+        </li>
+        <!-- <li class="nav-item">
                         <a class="dropdown-item small-font" (click)="translateToGerman()"><span
                             class="flag-icon flag-icon-de flag-icon"></span>
                         Deutsch</a>
                     </li> -->
-        </ul>
-      </div>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
+<div data-spy="scroll" data-target="#navbar" data-offset="0">
+
 
   <!-- About -->
-  <div class="row align-items-center about-container align-middle">
+  <div class="row align-items-center about-container align-middle" id="home">
     <div class="col-lg-7 col-left justify-content-center">
       <h1 class="big-font section-title">
         {{ "profession-short" | translate: param }}
       </h1>
       <blockquote class="small-font">
         {{ "passionate" | translate: param }}
-        <a class="light-emph">{{ "passionate-fields" | translate: param }}</a
-        >. {{ "enjoy" | translate: param }}
+        <a class="light-emph">{{ "passionate-fields" | translate: param }}</a>. {{ "enjoy" | translate: param }}
         <a class="light-emph">{{ "web-apps" | translate: param }}</a>
         {{ "participating" | translate: param }}
-        <a class="light-emph">{{ "projects" | translate: param }}</a
-        >.
+        <a class="light-emph">{{ "both-projects" | translate: param }}</a>.
       </blockquote>
     </div>
     <div class="col-lg-5 col-right"></div>
   </div>
 
+  <!--Waves-->
+  <app-wave-start></app-wave-start>
+
   <!-- Experience -->
-  <div class="row align-items-center about-container align-middle">
+  <div class="row align-items-center experience-container align-middle" id="projects">
     <div class="col-lg-12 col-left col-right">
-      <h1 class="big-font section-title">
-        {{ "experience-title" | translate: param }}
+      <h1 class="big-font section-title white-header">
+        {{ "projects" | translate: param }}
       </h1>
     </div>
     <div class="col-lg-12 col-left col-right">
@@ -104,7 +79,7 @@
     </div>
 
 
-  <!-- <div class="row align-items-center about-container align-middle">
+    <!-- <div class="row align-items-center about-container align-middle">
     <div class="col-5"></div>
     <div class="col-4">
       <app-contact></app-contact>
@@ -118,9 +93,33 @@
     <div class="col-lg-12 col-left col-right">
       
     </div> -->
+  </div>
+
+  <!--Waves-->
+  <app-wave-end></app-wave-end>
+
+  <!-- Testimonials -->
+  <div class="row align-items-center align-middle testimonials-container" id="testimonials">
+    <div class="col-lg-12 col-left col-right">
+      <h1 class="big-font section-title">
+        {{ "testimonials" | translate: param }}
+      </h1>
+    </div>
+    <div class="col-lg-12 col-left col-right">
+      <blockquote class="small-font">
+        {{ "progress" | translate: param }}.
+      </blockquote>
+      <!-- <app-testimonials></app-testimonials> -->
+    </div>
+  </div>
+
+
+
+  <!-- Contact -->
+  <div id="contact">
+    <app-contact></app-contact>
+  </div>
+
+
+  <!-- <app-spacer-dark></app-spacer-dark> -->
 </div>
-
-<!-- Contact -->
-<app-contact></app-contact>
-
-<!-- <app-spacer-dark></app-spacer-dark> -->

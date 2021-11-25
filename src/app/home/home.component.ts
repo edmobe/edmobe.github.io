@@ -15,31 +15,31 @@ export class HomeComponent implements OnInit {
   active = 0;
 
   /* ===================================== NAVIGATION FUNCTIONS ===================================== */
-  isHomeActive(): boolean {
-    return this.active === 0;
-  }
-  isAboutActive(): boolean {
-    return this.active === 1;
-  }
-  isWorkActive(): boolean {
-    return this.active === 2;
-  }
-  isContactActive(): boolean {
-    return this.active === 3;
-  }
+  // isHomeActive(): boolean {
+  //   return this.active === 0;
+  // }
+  // isAboutActive(): boolean {
+  //   return this.active === 1;
+  // }
+  // isWorkActive(): boolean {
+  //   return this.active === 2;
+  // }
+  // isContactActive(): boolean {
+  //   return this.active === 3;
+  // }
 
-  goHome(): void {
-    this.active = 0;
-  }
-  goAbout(): void {
-    this.active = 1;
-  }
-  goWork(): void {
-    this.active = 2;
-  }
-  goContact(): void {
-    this.active = 3;
-  }
+  // goHome(): void {
+  //   this.active = 0;
+  // }
+  // goAbout(): void {
+  //   this.active = 1;
+  // }
+  // goWork(): void {
+  //   this.active = 2;
+  // }
+  // goContact(): void {
+  //   this.active = 3;
+  // }
 
   /* ===================================== TRANSLATION FUNCTIONS ===================================== */
 

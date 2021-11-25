@@ -1,16 +1,21 @@
 {
     "home": "Inicio",
     "about": "Acerca",
-    "work": "Proyectos",
+    "projects": "Proyectos",
+    "testimonials": "Testimonios",
     "contact": "Contacto",
     "language": "Idioma",
+    "progress": "Esta sección se encuentra en construcción, pero pronto estará disponible",
+
+
+    
     "profession-short": "Soy un ingeniero en computadores de Costa Rica",
     "passionate": "Me apasiona",
     "passionate-fields": "programar y la electrónica",
     "enjoy": "Específicamente, disfruto crear",
     "web-apps": "aplicaciones web",
     "participating": "y participar tanto en",
-    "projects": "proyectos de software como de hardware",
+    "both-projects": "proyectos de software como de hardware",
     "experience": "Cuento con experiencia en",
     "experience-fields": "sistemas embebidos, procesamiento de imágenes y vídeo, optimización de algoritmos, sistemas operativos, arquitectura de computadores y enseñando",
     "algorithms": "algoritmos y estructuras de datos",
@@ -18,8 +23,6 @@
     "multicultural-help": "que me han ayudado a mejorar mis habilidades de trabajo en equipo con personas de todo el mundo",
 
 
-
-    "experience-title":"Experiencia",
     "embedded-systems":"Sistemas embebidos",
     "image-video":"Procesamiento de imágenes y vídeos",
     "algorithms-optimization":"Optimización de algoritmos",
