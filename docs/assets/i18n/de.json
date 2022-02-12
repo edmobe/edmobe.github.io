@@ -1,20 +1,38 @@
 {
     "home": "Home",
     "about": "Über",
-    "work": "Werk",
+    "projects": "Werk",
+    "testimonials": "Referenzen",
     "contact": "Kontakt",
     "language": "Sprache",
+    "progress": "Dieser Bereich befindet sich im Aufbau, wird aber bald verfügbar sein",
+
+
     "profession-short": "Ich bin ein Technische Informatiker aus Costa Rica",
-    "passionate": "I am passionate about",
-    "passionate-fields": "programming and electronics",
-    "enjoy": "Particularly, I enjoy creating",
-    "web-apps": "web applications",
-    "participating": "and participating in both",
-    "projects": "software and hardware projects",
-    "experience": "I have experience in",
-    "experience-fields": "embedded systems, image and video processing, algorithms optimization, operating systems, computer architecture, and teaching",
-    "algorithms": "algorithms and data structures",
-    "cultures": "Furthermore, I love cultures so I have had",
-    "multicultural": "multicultural experiences",
-    "multicultural-help": "which have helped me to improve my teamwork with people from all around the world"
+    "passionate": "Ich mag",
+    "passionate-fields": "Programmierung und Elektronik",
+    "enjoy": "Ich entwickle gerne",
+    "web-apps": "Webanwendungen",
+    "participating": "und beteilige mich gerne an",
+    "both-projects": "Hard- und Softwareprojekten",
+    "experience": "Ich habe Erfahrung mit",
+    "experience-fields": "Eingebettetes Systemen, Bildverarbeitung, Videoverarbeitung, Algorithmische Optimierung, Betriebssysteme, Rechnerarchitektur, und Unterrichten von",
+    "algorithms": "Algorithmen und Datenstrukturen",
+    "cultures": "Außerdem liebe ich Kulturen, daher habe ich",
+    "multicultural-help": "gemacht, die mir geholfen haben, meine Teamarbeit mit Menschen aus der ganzen Welt zu verbessern",
+
+    "embedded-systems":"Eingebettetes Systemen",
+    
+    "image-video":"Bild- und Videoverarbeitung",
+    "algorithms-optimization":"Algorithmische Optimierung",
+    "operating-systems":"Betriebssysteme",
+    "computer-architecture":"Rechnerarchitektur",
+    "teaching":"Unterrichten",
+    "multicultural": "Multikulturelle Erfahrungen",
+    "more":"Weiterlesen",
+
+    "website-info": "Gebaut mit",
+    "and": "und",
+    "disclaimer": "Entworfen und entwickelt von Eduardo Eduardo Moya Bello (edmobe) in San José, Costa Rica"
 }
+    

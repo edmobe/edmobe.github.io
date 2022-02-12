@@ -64,10 +64,20 @@ export class HomeComponent implements OnInit {
 
   constructor(private translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    this.translate.setDefaultLang('es');
+    this.translate.setDefaultLang('en');
 
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    this.translate.use('es');
+    if (navigator.language) {
+      const lang = navigator.language.substring(0,2)
+      if (lang === 'es' || lang === 'en' || lang === 'de') {
+        this.translate.use(lang);
+      }
+      else {
+        this.translate.use('en');
+      }
+    } else {
+      this.translate.use('en');
+    }
+
   }
   ngOnInit(): void {}
 }
