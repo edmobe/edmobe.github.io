@@ -154,8 +154,7 @@ h1 {
 // }
 
 /* ====================== RESPONSIVE ====================== */
-
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .col-left {
     padding-left: max(25vh - 5em, 2em);
   }
@@ -165,7 +164,7 @@ h1 {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1099px) {
   blockquote {
     font-size: 18px;
   }
@@ -183,5 +182,16 @@ h1 {
   .experience-container {
     padding-top: 2em;
     padding-bottom: 2em;
+  }
+}
+
+@media screen and (orientation:portrait) and (min-width: 1200px) {
+  .col-left {
+    padding-left: 3em;
+    padding-right: 3em
+  }
+  .col-right {
+    padding-left: 3em;
+    padding-right: 3em
   }
 }
